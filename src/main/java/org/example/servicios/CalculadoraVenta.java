@@ -223,6 +223,9 @@ public class CalculadoraVenta {
     public double valorPromedioVentas() {
         int cantidadRegistros = cantidadTotalVentas();
         double total = totalVentas();
+        if (cantidadRegistros == 0) {
+            return 0;
+        }
         return total / cantidadRegistros;
     }
 }
