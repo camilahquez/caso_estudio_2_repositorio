@@ -1,6 +1,6 @@
 package org.example;
 import org.example.modelo.Venta;
-import org.example.service.LectorCSV;
+import org.example.servicios.LectorCSV;
 import java.util.List;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
