@@ -1,4 +1,4 @@
-package org.example.servicios;
+package org.example.reporte;
 import org.knowm.xchart.*;
 import org.knowm.xchart.BitmapEncoder;
 import org.knowm.xchart.BitmapEncoder.BitmapFormat;

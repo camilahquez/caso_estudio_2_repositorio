@@ -1,5 +1,7 @@
 package org.example.servicios;
 import java.io.IOException;
+
+import org.example.reporte.GeneradorDeGrafica;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

@@ -1,6 +1,6 @@
 package org.example;
 import org.example.servicios.GeneradorDePrompt;
-import org.example.servicios.GeneradorDeGrafica;
+import org.example.reporte.GeneradorDeGrafica;
 import org.example.servicios.CalculadoraVenta;
 import org.example.servicios.LectorCSV;
 
