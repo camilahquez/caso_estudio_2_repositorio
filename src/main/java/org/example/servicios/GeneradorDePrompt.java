@@ -1,11 +1,13 @@
 package org.example.servicios;
 import java.util.HashMap;
+import java.util.Locale;
 
 public class GeneradorDePrompt {
     private CalculadoraVenta calculadoraVenta;
     public GeneradorDePrompt(CalculadoraVenta calculadoraVenta){
         this.calculadoraVenta = calculadoraVenta;
     }
+
     // Genera una tabla con el nombre de cada producto y la cantidad total de unidades vendidas.
     public String generarTablaCantidades() {
 
@@ -28,21 +30,24 @@ public class GeneradorDePrompt {
         return tabla;
     }
     public String generarPrompt(){
-        double valorTotalVentas = calculadoraVenta.totalVentas();
-        int cantidadTotalVendida = calculadoraVenta.cantidadTotalVentas();
+        String valorTotalVentas = String.format(Locale.US, "%.1f", calculadoraVenta.totalVentas());
+
+        int cantidadTotalVendida = calculadoraVenta.cantidadTotalUnidadesVendidas();
         String productoMayoresGananciasBrutas = calculadoraVenta.productoMayoresGananciasBrutas();
         String productoMasVendido = calculadoraVenta.productoMasVendido();
         double valorPromedioVentas = calculadoraVenta.valorPromedioVentas();
         String tablaProductosxCantidades = generarTablaCantidades();
         String tablaProductosxValoresTotales = generarTablaValores();
+        int cantidadRegistros = calculadoraVenta.cantidadTotalVentas();
         String resumen =  """
             RESUMEN DE INDICADORES DE VENTAS
 
             1. Valor total de ventas: %s
             2. Cantidad total de unidades vendidas: %d
-            3. producto con mayor valor acumulado de ventas : %s
+            3. Producto con mayor valor acumulado de ventas : %s
             4. Producto más vendido por cantidad: %s
             5. Valor promedio de ventas por registro: %s
+            6. Cantidad de registros de ventas: %d
 
             TABLA DE CANTIDADES VENDIDAS POR PRODUCTO:
             %s
@@ -55,6 +60,7 @@ public class GeneradorDePrompt {
                 productoMayoresGananciasBrutas,
                 productoMasVendido,
                 valorPromedioVentas,
+                cantidadRegistros,
                 tablaProductosxCantidades,
                 tablaProductosxValoresTotales
         );

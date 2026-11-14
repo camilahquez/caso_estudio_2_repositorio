@@ -23,7 +23,8 @@ public class GeneradorDeGrafica {
                 .xAxisTitle("Productos")
                 .yAxisTitle("Valor de acumulado ventas")
                 .build();
-        //Se utilizan arreglos porque primero necesitas organizar los datos de los productos y sus valores en dos colecciones que tengan la misma cantidad de elementos y mantengan una correspondencia por posición.
+
+        grafica.getStyler().setYAxisDecimalPattern("#,##0");
         grafica.addSeries("Ventas", Arrays.asList(productos), Arrays.stream(totalValores).boxed().toList());
 
         new SwingWrapper<>(grafica).displayChart();

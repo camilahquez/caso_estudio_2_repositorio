@@ -64,6 +64,14 @@ public class CalculadoraVenta {
         }
         return cantidadRegistros;
     }
+    // Calcula la cantidad total de unidades vendidas sumando las cantidades de todos los productos.
+    public int cantidadTotalUnidadesVendidas() {
+        int total = 0;
+        for (int cantidad : cantidadesVendidad().values()) {
+            total += cantidad;
+        }
+        return total;
+    }
 
     // Calcula la cantidad total de unidades vendidas de un producto específico.
     public int canidadTotalvendidaPorProducto(String producto) {

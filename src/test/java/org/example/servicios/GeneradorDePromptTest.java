@@ -53,12 +53,11 @@ class GeneradorDePromptTest {
 
         assertTrue(prompt.contains("Actúa como un analista de datos"));
         assertTrue(prompt.contains("RESUMEN DE INDICADORES DE VENTAS"));
-
-        assertTrue(prompt.contains("Valor total de ventas: 1.293E7"));
-        assertTrue(prompt.contains("Cantidad total de unidades vendidas: 5"));
-
+        assertTrue(prompt.contains("Valor total de ventas: 12930000.0"));
+        assertTrue(prompt.contains("Cantidad total de unidades vendidas: 29"));
         assertTrue(prompt.contains("Laptop: 7000000.0"));
         assertTrue(prompt.contains("Mouse: 16"));
+        assertTrue(prompt.contains("Cantidad de registros de ventas: 5"));
 
         assertTrue(prompt.contains("TABLA DE CANTIDADES VENDIDAS POR PRODUCTO"));
         assertTrue(prompt.contains("TABLA DE VALORES TOTALES DE VENTAS POR PRODUCTO"));

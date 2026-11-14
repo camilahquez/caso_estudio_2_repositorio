@@ -20,9 +20,9 @@ public class Main {
         System.out.println("========== RESUMEN DE VENTAS ==========");
 
         System.out.println("Valor total de ventas: $ " + String.format("%.1f", calculadoraVenta.totalVentas()));
-        System.out.println("Cantidad total de unidades vendidas: " + calculadoraVenta.cantidadTotalVentas());
-        System.out.println("Producto más vendido: $ " + calculadoraVenta.productoMasVendido());
-        System.out.println("Producto con mayor valor acumulado: $ " + calculadoraVenta.productoMayoresGananciasBrutas());
+        System.out.println("Cantidad total de unidades vendidas: " + calculadoraVenta.cantidadTotalUnidadesVendidas());
+        System.out.println("Producto más vendido:  " + calculadoraVenta.productoMasVendido());
+        System.out.println("Producto con mayor valor acumulado:  " + calculadoraVenta.productoMayoresGananciasBrutas());
         System.out.println("Valor promedio de ventas: $ " + calculadoraVenta.valorPromedioVentas());
         // Muestra la tabla de cantidades vendidas por producto.
         System.out.println("\n========== CANTIDADES VENDIDAS POR PRODUCTO ==========");

@@ -29,6 +29,11 @@ class CalculadoraVentaTest {
     }
 
     @Test
+    void probarCantidadTotalUnidadesVendidas() {
+        assertEquals(29, calculadoraVenta.cantidadTotalUnidadesVendidas());
+    }
+
+    @Test
     void probarCantidadTotalVentas() {
         assertEquals(5, calculadoraVenta.cantidadTotalVentas());
     }
